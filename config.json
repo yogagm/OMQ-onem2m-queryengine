@@ -1,0 +1,8 @@
+{
+  "cse_address": "http://192.168.0.100:8080",
+  "cse_root_name": "in-cse",
+  "local_qes": ["mn-0", "mn-1", "mn-2", "mn-3"],
+  "qe_address": "192.168.0.100",
+  "number_of_queries_for_benchmark_purposes": 1000,
+  "number_of_tests_for_benchmark_purposes": 10
+}

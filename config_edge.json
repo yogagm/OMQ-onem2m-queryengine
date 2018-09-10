@@ -1,0 +1,7 @@
+{
+  "cse_address": "http://192.168.0.101:8080",
+  "cse_root_name": "mn-0",
+  "main_cse_root_name": "in-cse",
+  "qe_address": "192.168.0.101",
+  "main_qe_address": "192.168.0.100"
+}
