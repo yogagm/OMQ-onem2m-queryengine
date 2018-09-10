@@ -1,0 +1,31 @@
+#!/bin/bash
+trap ctrl_c INT
+
+function ctrl_c() {
+    echo "Closing..."
+    killall node
+    ssh pi@192.168.0.101 'killall node; killall nodejs'
+    ssh pi@192.168.0.102 'killall node; killall nodejs'
+    ssh pi@192.168.0.103 'killall node; killall nodejs'
+    ssh pi@192.168.0.104 'killall node; killall nodejs'
+}
+
+echo 'Starting IN-CSE...'
+killall node
+bash -c 'cd ../../in-mobius/in-cse/; node mobius > /dev/null 2>&1'&
+sleep 5
+
+echo 'Starting MN-CSEs...'
+ssh pi@192.168.0.101 'cd onem2m-queryengine; killall node; killall nodejs; killall java; ./things_mn.sh > /dev/null 2>&1' &
+ssh pi@192.168.0.102 'cd onem2m-queryengine; killall node; killall nodejs; killall java; ./things_mn.sh > /dev/null 2>&1' &
+ssh pi@192.168.0.103 'cd onem2m-queryengine; killall node; killall nodejs; killall java; ./things_mn.sh > /dev/null 2>&1' &
+ssh pi@192.168.0.104 'cd onem2m-queryengine; killall node; killall nodejs; killall java; ./things_mn.sh > /dev/null 2>&1' &
+
+echo 'Waiting 20 seconds just to make sure'
+sleep 20
+
+echo 'Now start the executor'
+
+#echo 'Starting benchmark...'
+#node executor.js cse
+

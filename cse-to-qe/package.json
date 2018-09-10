@@ -1,0 +1,37 @@
+{
+  "name": "onem2m-queryengine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://initrunlevel0@github.com/initrunlevel0/onem2m-queryengine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/initrunlevel0/onem2m-queryengine/issues"
+  },
+  "homepage": "https://github.com/initrunlevel0/onem2m-queryengine#readme",
+  "dependencies": {
+    "amqplib": "^0.5.1",
+    "async": "^2.3.0",
+    "body-parser": "^1.17.1",
+    "cpu-stat": "^2.0.1",
+    "express": "^4.15.2",
+    "express-xml-bodyparser": "^0.3.0",
+    "ip": "^1.1.5",
+    "ipc-event-emitter": "^2.0.0",
+    "minimist": "^1.2.0",
+    "numjs": "^0.13.1",
+    "socket.io": "^1.7.3",
+    "socket.io-client": "^1.7.3",
+    "underscore": "^1.8.3",
+    "unirest": "^0.5.1",
+    "uuid": "^3.0.1",
+    "winston": "^2.3.1"
+  }
+}
