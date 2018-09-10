@@ -1,4 +1,4 @@
-# OMQ: Ad-hoc stream query processing on top of oneM2M Middleware
+# OMQ: An IoT data stream query engine on oneM2M-based middleware
 
 ## Introduction
 
